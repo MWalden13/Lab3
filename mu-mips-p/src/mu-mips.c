@@ -359,6 +359,11 @@ void ID()
 void IF()
 {	//something with memread
 	/*IMPLEMENT THIS*/
+	
+	IF_ID.IR = mem_read_32(CURRENT_STATE.PC);	//Get current value in memory
+	IF_ID.PC = CURRENT_STATE.PC + 4;	//Increment counter
+	NEXT_STATE.PC = IF_ID.PC;	//Store incremented counter into next state of pc
+	
 }
 
 
